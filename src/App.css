@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+.NavBar{
+  background-color: rgba(0, 0, 0, 0.555);
+  width: 100%;
+  align-content: space-between;
+}
+.NavBar > div {
+  width: 50%;
+}
+.NavBar > div >img{
+  width: 97px;
+}
+.NavBar> .LinkBar {
+  box-sizing: border-box;
+  background-color: lawngreen;
+  width: 50%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.WelcomeCard {
+  background-color: rgb(192, 211, 245);
+  box-sizing: border-box;
+  width: 90%;
+  margin-left: 2%;
+  border-radius: 20px;  
+  padding: 30px 0 0 30px;
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.WelcomeCard > button{
+  margin: 30px 0 200px 0;
+  padding: 5px 20px;
 }
