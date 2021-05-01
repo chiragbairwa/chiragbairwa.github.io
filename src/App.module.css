@@ -1,0 +1,91 @@
+.Container{
+  margin: 3% 5% 3% 3%;
+}
+/* .SocialLinks {
+  float: right;
+} */
+
+.TopBar {
+  width:100%;
+  margin-bottom: 3%;
+}
+.TopBar >img{
+  width: 97px;
+}
+.NavBar {
+  padding-top: 40px;
+  float: right;
+}
+.NavBar > a {
+    text-decoration: none;
+    color: #222222;
+    padding: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.WelcomeView {
+  background-color:#F0F0F0;
+  box-sizing: border-box;
+  border-radius: 5px;  
+  padding: 30px 0 0 30px;
+  
+}
+.SkillBtn{
+  margin: 30px 0 200px 0;
+  padding: 5px 20px;
+}
+
+.SkillView {
+  background-color: darkgray;
+  box-sizing: border-box;
+  margin-top: 2%;
+  border-radius: 5px;  
+  padding: 30px 0 0 30px;
+}
+.SkillView > h1 {
+  padding-bottom: 200px;
+}
+
+.ProjectView {
+  background-color: darkgray;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.ProjectCards {
+  margin: 0 -5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProjectCards > div {
+  float:right;
+  margin-right: 100px;
+}
+
+.ProjectCards:after {
+  content: "";
+  display:grid;
+  clear: both;
+}
+.ProjectCards> div > p {
+  background-color: darkgreen;
+  border-radius: 5px;
+  padding: 150px 150px;
+
+}
+
+@media screen and (max-width: 600px){ 
+  .ProjectCards {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }  
+}

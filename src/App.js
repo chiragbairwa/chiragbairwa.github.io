@@ -1,64 +1,54 @@
 import logo from './logo.svg';
-import classes from './App.css';
+import classes from './App.module.css';
 
 function App() {
   return (
     <div className="App">
-      {/* Nav Bar */}
-      <nav className={classes.NavBar}>
-        {/* LOGO */}
-        <div>                    
-          <img src={logo} alt={"Dp"}></img>
-        </div>        
-        
-          {/* Links */}
-          <div className={classes.LinkBar }>
-            <a href={"http://localhost:3000/"}>Skills   </a>
-            <a href={"http://localhost:3000/"}>Projects   </a>
+      <div className={classes.Container}>
+        <div className={classes.TopBar}>
+          <img src={logo} alt={"Dp"} />
+
+          {/* Nav Bar */}
+          <nav className={classes.NavBar}>   
+            <a href={"http://localhost:3000/"}>Skills</a>
+            <a href={"http://localhost:3000/"}>Projects</a>
             <a href={"http://localhost:3000/"}>About</a>
+          </nav>
+        </div>
+              
+        {/* Welcome */}
+        <div className={classes.WelcomeView}>
+          <div className={classes.WelcomeMsg}>
+            <h1>I'm<br></br>CHIRAG,Welcome</h1>
           </div>
-                  
-      </nav>
-      
-      {/* Social Links */}
-        <div className={classes.SocialLinks}></div>
-            
-      {/* Welcome */}
-      <div className={classes.WelcomeCard}>
-        <div className={classes.WelcomeMsg}>
-          <h1>I'm<br></br>CHIRAG,Welcome</h1>
-        </div>
-        
-        {/* Show My Skill Button */}
-          <button>My Skills</button>
-        
-      </div>
-
-      {/* Skills Column */}
-      <div>
-        <h1> Skills </h1>
-        <div className={classes.PieChart}>
-
-        </div>
-      </div>
-
-      {/* Projects Column */}
-      <div>
-        <h1> Projects </h1>
-        <div >
-          <div className={classes.ProjectCards}> </div>
-          <div className={classes.ProjectCards}> </div>
-          <div className={classes.ProjectCards}> </div>
-          <div className={classes.ProjectCards}> </div>
-          <div className={classes.ProjectCards}> </div>
+          
+          {/* Show My Skill Button */}
+            <button className={classes.SkillBtn}>My Skills</button>
+          
         </div>
 
+        {/* Skills Column */}
+        <div className={classes.SkillView}>
+          <h1> Skills </h1>
+          <div className={classes.PieChart}>
+          </div>
+        </div>
+
+        {/* Projects Column */}
+        <div className={classes.ProjectView}>
+          <h1> Projects </h1>
+
+          {/* Cards */}
+          <div className={classes.ProjectCards}>
+            <div> <p>Lorem</p> </div>
+            <div> <p>Lorem</p> </div>
+          </div>
+        </div>
+
+        {/* Social Links */}
+        <div className={classes.SocialLinks}>
+        </div>        
       </div>
-
-      {/* Social Links */}
-      <div className={classes.SocialLinks}></div>
-
-      
     </div>
   );
 }
