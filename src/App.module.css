@@ -1,8 +1,16 @@
+:root {
+  --cardradius: 30px;
+}
 .Container{
   margin: 3% 5% 3% 3%;
 }
-/* .SocialLinks {
+/*  .SocialLinks {
   float: right;
+}
+.SocialLinks > p {
+  background-color:aquamarine;
+  border-radius: 4px;
+  padding: 4%; 
 } */
 
 .TopBar {
@@ -15,77 +23,82 @@
 .NavBar {
   padding-top: 40px;
   float: right;
+  display: flex;
+  justify-content: space-between;
 }
 .NavBar > a {
     text-decoration: none;
     color: #222222;
-    padding: 20px;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 20px;
+    padding: 5px 10px;
+}
+.NavBar > a:hover{
+  border: #A9A9A9;
+  border-radius: 10px;
+  border-width: 1.5px;
+  border-style:solid;
 }
 
 .WelcomeView {
-  background-color:#F0F0F0;
+  background-color:#5F9EA0;
+  height: 450px;
   box-sizing: border-box;
   border-radius: 5px;  
-  padding: 30px 0 0 30px;
-  
+  padding: 30px 0 0 30px;  
 }
-.SkillBtn{
-  margin: 30px 0 200px 0;
+.WelcomeMsg > h1{
+  margin-left: 5%;
+}
+.WelcomeBtn > button{
   padding: 5px 20px;
+}
+.WelcomeBtn > button:first-child{
+  margin: 30px 20px 0 6%;
 }
 
 .SkillView {
-  background-color: darkgray;
-  box-sizing: border-box;
-  margin-top: 2%;
+  background-color:khaki;
+  margin: 2% 0;
   border-radius: 5px;  
-  padding: 30px 0 0 30px;
+  padding: 30px;
 }
-.SkillView > h1 {
-  padding-bottom: 200px;
+.SkillCard {
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+}
+.PieChart {
+  width: 100%;
+  height: 25rem;
+  background: conic-gradient(
+    red 36deg, green 36deg 170deg, yellow 170deg);
+  border-radius: 50%;
 }
 
 .ProjectView {
-  background-color: darkgray;
+  background-color: coral;
   box-sizing: border-box;
   padding: 30px;
   border-radius: 5px;
 }
 
 .ProjectCards {
-  margin: 0 -5px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content:space-evenly; 
 }
 
 .ProjectCards > div {
-  float:right;
-  margin-right: 100px;
+  width: 40%;
+}
+.ProjectCards > div > p {
+  background-color:aquamarine;
+  border-radius: var(--cardradius);
+  padding: 30%;
 }
 
-.ProjectCards:after {
-  content: "";
-  display:grid;
-  clear: both;
-}
-.ProjectCards> div > p {
-  background-color: darkgreen;
-  border-radius: 5px;
-  padding: 150px 150px;
-
-}
-
-@media screen and (max-width: 600px){ 
-  .ProjectCards {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }  
+.AboutView {
+  background-color: #F0F0F0;
+  height: 200px;
+  display: flex;
+  justify-content: center;
 }
