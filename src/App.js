@@ -1,5 +1,10 @@
-import logo from './logo.svg';
+import logo from './images/logo.svg';
+import bot from './images/Bot.png';
+import calculator from './images/Calc.png';
+import pass from './images/Password.png';
+import rps from './images/RPS.png';
 import classes from './App.module.css';
+import { PieChart} from 'react-minimal-pie-chart';
 
 function App() {
   return (
@@ -34,24 +39,29 @@ function App() {
           <h1> Skills </h1>
           
           <div className={classes.SkillCard}>
-            <div className={classes.PieChart}>
-
+            <div className={classes.PieChart}>         
+              <PieChart
+                data={[
+                  { title: 'C++', value: 10, color: '#E38627' },
+                  { title: 'ReactJs', value: 15, color: '#C13C37' },
+                  { title: 'Python', value: 20, color: '#6A2135' },
+                ]}
+              />
             </div>
           </div>
         </div>
-
         {/* Projects View */}
         <div className={classes.ProjectView}>
           <h1> Projects </h1>
           {/* Cards */}
           <div className={classes.ProjectCards}>
-            <div>
-              <p>C/C++</p>
-              <p>Python</p>
+            <div className={classes.FirstRow}>
+              <a href={"http://localhost:3000/"}></a>
+              <a href={"http://localhost:3000/"}></a>
             </div>
-            <div>
-              <p>Java</p>
-              <p>React</p>
+            <div className={classes.SecondRow}>
+              <a href={"http://localhost:3000/"} ></a>
+              <a href={"http://localhost:3000/"}></a>
             </div>            
           </div>
         </div>

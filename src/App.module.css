@@ -1,5 +1,5 @@
 :root {
-  --cardradius: 30px;
+  --cardradius: 20px;
 }
 .Container{
   margin: 3% 5% 3% 3%;
@@ -70,9 +70,6 @@
 .PieChart {
   width: 100%;
   height: 25rem;
-  background: conic-gradient(
-    red 36deg, green 36deg 170deg, yellow 170deg);
-  border-radius: 50%;
 }
 
 .ProjectView {
@@ -85,15 +82,22 @@
 .ProjectCards {
     display: flex;
     justify-content:space-evenly; 
+    flex-direction: columns;
 }
 
 .ProjectCards > div {
   width: 40%;
 }
-.ProjectCards > div > p {
+.ProjectCards > div {
+  box-sizing: border-box;
   background-color:aquamarine;
   border-radius: var(--cardradius);
-  padding: 30%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+.FirstRow > a {
+  width:100px;
+  background-image: url(./images/Bot.png);
 }
 
 .AboutView {
