@@ -1,10 +1,7 @@
 import logo from './images/logo.svg';
-import bot from './images/Bot.png';
-import calculator from './images/Calc.png';
-import pass from './images/Password.png';
-import rps from './images/RPS.png';
 import classes from './App.module.css';
 import { PieChart} from 'react-minimal-pie-chart';
+import Project from './comp/project';
 
 function App() {
   return (
@@ -50,21 +47,9 @@ function App() {
             </div>
           </div>
         </div>
+        
         {/* Projects View */}
-        <div className={classes.ProjectView}>
-          <h1> Projects </h1>
-          {/* Cards */}
-          <div className={classes.ProjectCards}>
-            <div className={classes.FirstRow}>
-              <a href={"http://localhost:3000/"}></a>
-              <a href={"http://localhost:3000/"}></a>
-            </div>
-            <div className={classes.SecondRow}>
-              <a href={"http://localhost:3000/"} ></a>
-              <a href={"http://localhost:3000/"}></a>
-            </div>            
-          </div>
-        </div>
+        <Project />
 
         {/* Social Links */}
         {/* <div className={classes.SocialLinks}>
@@ -76,7 +61,26 @@ function App() {
       {/* About */}
       <div className={classes.AboutView}>
         <h2>About</h2>
+        {/* Social Links */}
+        <div className={classes.Social}>
+          <h3>Links :-</h3>
+          <div className={classes.SocialBtn}>
+            <a href={"http://localhost:3000/"}>              
+              <div className={classes.github}></div>
+            </a>
+            <a href={"http://localhost:3000/"}>              
+              <div className={classes.github}></div>
+            </a>
+            <a href={"http://localhost:3000/"}>              
+              <div className={classes.github}></div>
+            </a>
+            <a href={"http://localhost:3000/"}>              
+              <div className={classes.github}></div>
+            </a>
+          </div>
+        </div>   
       </div>
+      
     </div>
   );
 }
