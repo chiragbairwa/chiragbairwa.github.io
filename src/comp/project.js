@@ -10,7 +10,7 @@ function Project() {
           <h1> Projects </h1>
           {/* Cards */}
           <div className={classes.ProjectCards}>
-            <div >
+            <div className={classes.FirstColumn}>
               <a href={"http://localhost:3000/"}>
 								<div className={classes.TelegramBot}>
 									<h3>Telegram Bot</h3>
@@ -18,19 +18,19 @@ function Project() {
               </a>
               <a href={"http://localhost:3000/"}>
 								<div className={classes.Calculator}>
-									<h3>Telegram Bot</h3>
+									<h3>Calculator</h3>
 								</div>
               </a>
             </div>
-            <div>
+            <div className={classes.SecondColumn}>
               <a href={"http://localhost:3000/"}>
-								<div className={classes.Calculator}>
-									<h3>Telegram Bot</h3>
+								<div className={classes.PassCreator}>
+									<h3>Password Generator</h3>
 								</div>
 							</a>
               <a href={"http://localhost:3000/"}>
-								<div className={classes.Calculator}>
-									<h3>Telegram Bot</h3>
+								<div className={classes.RockPaperScissor}>
+									<h3>Rock Paper Scissors</h3>
 								</div>
 							</a>
             </div>            

@@ -1,22 +1,15 @@
-import logo from './images/logo.svg';
 import classes from './App.module.css';
 import { PieChart} from 'react-minimal-pie-chart';
+// Importing Components
 import Project from './comp/project';
+import {TopBar} from './comp/NavBar';
 
 function App() {
   return (
     <div className="App">
       <div className={classes.Container}>
-        <div className={classes.TopBar}>
-          <img src={logo} alt={"Dp"} />
-
-          {/* Nav Bar */}
-          <nav className={classes.NavBar}> 
-            <a href={"http://localhost:3000/"}>Skills</a>
-            <a href={"http://localhost:3000/"}>Projects</a>
-            <a href={"http://localhost:3000/"}>About</a>
-          </nav>
-        </div>
+        {/* TopBar */}
+        <TopBar />
               
         {/* Welcome View*/}
         <div className={classes.WelcomeView}>
@@ -60,7 +53,7 @@ function App() {
 
       {/* About */}
       <div className={classes.AboutView}>
-        <h2>About</h2>
+        <div className={classes.flex}>
         {/* Social Links */}
         <div className={classes.Social}>
           <h3>Links :-</h3>
@@ -78,7 +71,21 @@ function App() {
               <div className={classes.github}></div>
             </a>
           </div>
-        </div>   
+        </div> 
+        
+      {/* Contact */}
+        <div className={classes.Contact}>
+          <h3>Contact</h3>
+          <div>
+            <h5>chirag@mail</h5>
+            <h5>Chandigarh, India</h5>
+            <h5>9988776655</h5>
+          </div>
+        </div>
+        </div>
+        {/* Copyright */}
+        <hr></hr>
+        © Made by Chirag
       </div>
       
     </div>
