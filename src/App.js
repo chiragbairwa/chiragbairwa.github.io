@@ -2,7 +2,8 @@ import classes from './App.module.css';
 import { PieChart} from 'react-minimal-pie-chart';
 // Importing Components
 import Project from './comp/project';
-import {TopBar} from './comp/NavBar';
+import TopBar from './comp/NavBar';
+import Button from 'react-bootstrap/Button';
 
 function App() {
   return (
@@ -19,13 +20,13 @@ function App() {
           
           {/* Show Buttons */}
           <div className={classes.WelcomeBtn}>
-            <button className={classes.SkillBtn}>My Skills</button>  
-            <button className={classes.SkillBtn}>My Cv</button>    
+            <Button variant="danger">My Skills</Button>
+            <Button variant="success">My CV</Button>   
           </div>    
         </div>
 
         {/* Skills View */}
-        <div className={classes.SkillView}>
+        <div className={classes.SkillView} >
           <h1> Skills </h1>
           
           <div className={classes.SkillCard}>
@@ -62,10 +63,10 @@ function App() {
               <div className={classes.github}></div>
             </a>
             <a href={"http://localhost:3000/"}>              
-              <div className={classes.github}></div>
+              <div className={classes.linkedin}></div>
             </a>
             <a href={"http://localhost:3000/"}>              
-              <div className={classes.github}></div>
+              <div className={classes.instagram}></div>
             </a>
             <a href={"http://localhost:3000/"}>              
               <div className={classes.github}></div>
@@ -85,7 +86,7 @@ function App() {
         </div>
         {/* Copyright */}
         <hr></hr>
-        © Made by Chirag
+        © Made by Chirag With ❤️ & Sweat
       </div>
       
     </div>

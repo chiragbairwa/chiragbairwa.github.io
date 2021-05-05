@@ -1,22 +1,35 @@
-import logo from '../images/logo.svg';
+import logo from '../images/dp.png';
 import classes from '../App.module.css';
+import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
 
-export function TopBar(){
+export default function TopBar(){
 	return(
     <div className={classes.TopBar}>
-      <img src={logo} alt={"Dp"} />
-
+      <img src={logo} alt={"Dp"} className={classes.Dp} />
+      
       {/* Nav Bar */}
       <nav className={classes.NavBar}> 
-				<a href={"http://localhost:3000/"}>Skills</a>
-				<a href={"http://localhost:3000/"}>Projects</a>
-				<a href={"http://localhost:3000/"}>About</a>
+				{/* <Button variant="outline-primary" href="#"></Button> */}
+        <Button variant="outline-primary" href="#Skills">Skills</Button>
+				<Button variant="outline-primary" href="http://localhost:3000/#Projects">Projects</Button>
+				<Button variant="outline-primary" href="#About">About</Button>
 			</nav>
-    </div>	
+
+      {/* Mobile NavBar */}
+      <nav className={classes.NavBarMob}>
+          <Dropdown>
+            <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+              Menu
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu variant="secondary">
+              <Dropdown.Item href="#Skills">Skills</Dropdown.Item>
+              <Dropdown.Item href="http://localhost:3000/#Projects">Projects</Dropdown.Item>
+              <Dropdown.Item href="http://localhost:3000/#About">About</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+      </nav>
+    </div>
 	);
 }
-// export default function NavBar_Mobile(){
-//   return(
-// 		true
-// 	);
-// }
