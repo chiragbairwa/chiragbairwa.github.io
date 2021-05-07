@@ -1,11 +1,13 @@
 import classes from './App.module.css';
+import Button from 'react-bootstrap/Button';
 import { PieChart} from 'react-minimal-pie-chart';
+
 // Importing Components
 import Project from './comp/project';
 import TopBar from './comp/NavBar';
-import Button from 'react-bootstrap/Button';
 
-function App() {
+export default function App() {
+  const CvLink = "https://docs.google.com/document/d/1wL4Ehjdug3QqX2hZ89xwo7L4lpX0w4l-8l_NilREjCM/edit?usp=sharing";
   return (
     <div className="App">
       <div className={classes.Container}>
@@ -13,76 +15,70 @@ function App() {
         <TopBar />
               
         {/* Welcome View*/}
-        <div className={classes.WelcomeView}>
-          <div className={classes.WelcomeMsg}>
-            <h1>Hey I'm<br></br>CHIRAG, Welcome</h1>
-          </div>
+        <div className={classes.WelcomeView} id="WelcomeView">
+
+          <h1 className={classes.WelcomeMsg}>Bonjour 👋</h1>
+            <p>Hello! My name is Chirag. I am a Front-End Developer living in Chandigarh, India.</p>
           
           {/* Show Buttons */}
-          <div className={classes.WelcomeBtn}>
-            <Button variant="danger">My Skills</Button>
-            <Button variant="success">My CV</Button>   
-          </div>    
+            <Button variant="outline-light" href={CvLink} className={classes.CvBtn} target="_blank" rel="noopener noreferrer">My Resume</Button>
         </div>
 
         {/* Skills View */}
-        <div className={classes.SkillView} >
-          <h1> Skills </h1>
-          
+        <div className={classes.SkillView} id="SkillView">
+          <h1 id="#skills">Skills </h1>
           <div className={classes.SkillCard}>
             <div className={classes.PieChart}>         
               <PieChart
                 data={[
-                  { title: 'C++', value: 10, color: '#E38627' },
-                  { title: 'ReactJs', value: 15, color: '#C13C37' },
+                  { title: 'Dart', value: 10, color: '#fdc878' },
+                  { title: 'C/C++', value: 18, color: '#E38627' },
+                  { title: 'JavaScript', value: 20, color: '#C13C37' },
                   { title: 'Python', value: 20, color: '#6A2135' },
                 ]}
+                label={({ dataEntry }) => dataEntry.title}
+                labelStyle={{
+                  fontSize: '5px',
+                }}
               />
             </div>
           </div>
         </div>
         
         {/* Projects View */}
-        <Project />
-
-        {/* Social Links */}
-        {/* <div className={classes.SocialLinks}>
-          <p>Lor</p>
-          <p>Lor</p>
-          </div>  */}      
+        <Project id="ProjectView"/>
+      
       </div>
 
       {/* About */}
-      <div className={classes.AboutView}>
+      <div className={classes.AboutView} id="AboutView">
         <div className={classes.flex}>
-        {/* Social Links */}
-        <div className={classes.Social}>
-          <h3>Links :-</h3>
-          <div className={classes.SocialBtn}>
-            <a href={"http://localhost:3000/"}>              
-              <div className={classes.github}></div>
-            </a>
-            <a href={"http://localhost:3000/"}>              
-              <div className={classes.linkedin}></div>
-            </a>
-            <a href={"http://localhost:3000/"}>              
-              <div className={classes.instagram}></div>
-            </a>
-            <a href={"http://localhost:3000/"}>              
-              <div className={classes.github}></div>
-            </a>
+          {/* Contact */}
+          <div className={classes.Contact}>
+            <h4>Feel free to contact me!!</h4>
+            <div>
+              <p>
+                <a href="mailto:chiragbairwa2k18@gmail.com">chiragbairwa2k18@gmail.com</a><br></br>
+                Chandigarh, India
+              </p>
+            </div>
           </div>
-        </div> 
         
-      {/* Contact */}
-        <div className={classes.Contact}>
-          <h3>Contact</h3>
-          <div>
-            <h5>chirag@mail</h5>
-            <h5>Chandigarh, India</h5>
-            <h5>9988776655</h5>
-          </div>
-        </div>
+          {/* Social Links */}
+          <div className={classes.Social}>
+            <h4>Links</h4>
+            <div className={classes.SocialBtn}>
+              <a href={"https://github.com/chiragbairwa"} target="_blank" rel="noopener noreferrer">              
+                <div className={classes.github}></div>
+              </a>
+              <a href={"https://linkedin.com/in/chiragbairwa"} target="_blank" rel="noopener noreferrer">              
+                <div className={classes.linkedin}></div>
+              </a>
+              <a href={"https://instagram.com/x.chirag_x"} target="_blank" rel="noopener noreferrer">              
+                <div className={classes.instagram}></div>
+              </a>
+            </div>
+          </div> 
         </div>
         {/* Copyright */}
         <hr></hr>
@@ -92,5 +88,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

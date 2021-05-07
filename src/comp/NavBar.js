@@ -1,7 +1,10 @@
-import logo from '../images/dp.png';
-import classes from '../App.module.css';
+// Modules
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Link from 'react-scroll/modules/components/Link';
+import classes from '../App.module.css';
+
+import logo from '../images/dp.png';
 
 export default function TopBar(){
 	return(
@@ -9,11 +12,17 @@ export default function TopBar(){
       <img src={logo} alt={"Dp"} className={classes.Dp} />
       
       {/* Nav Bar */}
-      <nav className={classes.NavBar}> 
-				{/* <Button variant="outline-primary" href="#"></Button> */}
-        <Button variant="outline-primary" href="#Skills">Skills</Button>
-				<Button variant="outline-primary" href="http://localhost:3000/#Projects">Projects</Button>
-				<Button variant="outline-primary" href="#About">About</Button>
+      <nav className={classes.NavBar}>
+        <Link to="SkillView" smooth={true} offset={-70} duration={500} >
+          <Button variant="outline-secondary" >Skills</Button>
+        </Link>
+        <Link to="ProjectView" smooth={true} offset={-70} duration={500} >
+          <Button variant="outline-secondary" >Projects</Button>
+        </Link>
+				<Link to="AboutView" smooth={true} duration={500} >
+          <Button variant="outline-secondary" >About</Button>
+        </Link>
+				
 			</nav>
 
       {/* Mobile NavBar */}
@@ -23,10 +32,16 @@ export default function TopBar(){
               Menu
             </Dropdown.Toggle>
 
-            <Dropdown.Menu variant="secondary">
-              <Dropdown.Item href="#Skills">Skills</Dropdown.Item>
-              <Dropdown.Item href="http://localhost:3000/#Projects">Projects</Dropdown.Item>
-              <Dropdown.Item href="http://localhost:3000/#About">About</Dropdown.Item>
+            <Dropdown.Menu variant="secondary" className={classes.Dropdown}>
+              <Link to="SkillView" smooth={true} offset={-70} duration={500} >
+                Skills
+              </Link>
+              <Link to="ProjectView" smooth={true} offset={-70} duration={500} >
+                Projects
+              </Link>
+              <Link to="AboutView" smooth={true} duration={500} >
+                About
+              </Link>
             </Dropdown.Menu>
           </Dropdown>
       </nav>

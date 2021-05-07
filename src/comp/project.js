@@ -1,36 +1,43 @@
-// import bot from './images/Bot.png';
-// import calculator from './images/Calc.png';
-// import pass from './images/Password.png';
-// import rps from './images/RPS.png';
 import classes from '../App.module.css';
 
-function Project() {
+// Images
+import RPS from '../images/RPS.svg';
+import PokedexBot from '../images/pokedex.svg';
+import PassCreator from '../images/password.svg';
+import Calculator from '../images/calculator.svg';
+
+
+function Project({id}) {
     return(
-        <div className={classes.ProjectView}>
+        <div className={classes.ProjectView} id={id}>
           <h1> Projects </h1>
           {/* Cards */}
           <div className={classes.ProjectCards}>
             <div className={classes.FirstColumn}>
-              <a href={"http://localhost:3000/"}>
-								<div className={classes.TelegramBot}>
-									<h3>Telegram Bot</h3>
+              <a href={"https://github.com/chiragbairwa/Pokedex-Bot"} target="_blank" rel="noopener noreferrer">
+								<div className={classes.PokedexBot} >
+									<h3>Pokedex Bot</h3>
+                  <img src={PokedexBot} alt="Pokedex" ></img>
 								</div>
               </a>
-              <a href={"http://localhost:3000/"}>
+              <a href={"https://github.com/chiragbairwa/Calculator-Python"} target="_blank" rel="noopener noreferrer">
 								<div className={classes.Calculator}>
 									<h3>Calculator</h3>
+                  <img src={Calculator} alt="Calculator" ></img>
 								</div>
               </a>
             </div>
             <div className={classes.SecondColumn}>
-              <a href={"http://localhost:3000/"}>
+              <a href={"https://github.com/chiragbairwa/Password-Creator"} target="_blank" rel="noopener noreferrer">
 								<div className={classes.PassCreator}>
-									<h3>Password Generator</h3>
+									<h3>Password Creator</h3>
+                  <img src={PassCreator} alt="Password Creator" ></img>
 								</div>
 							</a>
-              <a href={"http://localhost:3000/"}>
+              <a href={"https://github.com/chiragbairwa/RPS-Game"} target="_blank" rel="noopener noreferrer">
 								<div className={classes.RockPaperScissor}>
 									<h3>Rock Paper Scissors</h3>
+                  <img src={RPS} alt="RPS" ></img>
 								</div>
 							</a>
             </div>            
