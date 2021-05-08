@@ -17,7 +17,7 @@ export default function App() {
         {/* Welcome View*/}
         <div className={classes.WelcomeView} id="WelcomeView">
 
-          <h1 className={classes.WelcomeMsg}>Bonjour 👋</h1>
+          <h1 className={classes.WelcomeMsg}>Bonjour</h1>
             <p>Hello! My name is Chirag. I am a Front-End Developer living in Chandigarh, India.</p>
           
           {/* Show Buttons */}
@@ -26,7 +26,7 @@ export default function App() {
 
         {/* Skills View */}
         <div className={classes.SkillView} id="SkillView">
-          <h1 id="#skills">Skills </h1>
+          <h1 id="#skills" className={classes.ViewHeading}>Skills </h1>
           <div className={classes.SkillCard}>
             <div className={classes.PieChart}>         
               <PieChart
@@ -82,7 +82,7 @@ export default function App() {
         </div>
         {/* Copyright */}
         <hr></hr>
-        © Made by Chirag With ❤️ & Sweat
+        <p>© Made by Chirag With ❤️ & Sweat</p>
       </div>
       
     </div>

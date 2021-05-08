@@ -14,13 +14,13 @@ export default function TopBar(){
       {/* Nav Bar */}
       <nav className={classes.NavBar}>
         <Link to="SkillView" smooth={true} offset={-70} duration={500} >
-          <Button variant="outline-secondary" >Skills</Button>
+          <Button variant="outline-primary" >Skills</Button>
         </Link>
         <Link to="ProjectView" smooth={true} offset={-70} duration={500} >
-          <Button variant="outline-secondary" >Projects</Button>
+          <Button variant="outline-primary" >Projects</Button>
         </Link>
 				<Link to="AboutView" smooth={true} duration={500} >
-          <Button variant="outline-secondary" >About</Button>
+          <Button variant="outline-primary" >About</Button>
         </Link>
 				
 			</nav>
@@ -28,11 +28,11 @@ export default function TopBar(){
       {/* Mobile NavBar */}
       <nav className={classes.NavBarMob}>
           <Dropdown>
-            <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+            <Dropdown.Toggle variant="primary" id="dropdown-basic">
               Menu
             </Dropdown.Toggle>
 
-            <Dropdown.Menu variant="secondary" className={classes.Dropdown}>
+            <Dropdown.Menu variant="primary" className={classes.Dropdown}>
               <Link to="SkillView" smooth={true} offset={-70} duration={500} >
                 Skills
               </Link>
