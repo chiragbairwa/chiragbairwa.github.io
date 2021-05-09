@@ -1,0 +1,58 @@
+// Modules
+import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
+import Link from 'react-scroll/modules/components/Link';
+import classes from '../App.module.css';
+
+import logo from '../images/dp.png';
+
+export default function Header(){
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      document.getElementById("header").style.backgroundColor = '#131520';
+    } 
+    else {
+      document.getElementById("header").style.backgroundColor= '#23263A';
+    }
+  }
+	return(
+    <div className={classes.Header} id="header">
+      <img src={logo} alt={"Dp"} className={classes.Dp} />
+      {/* Nav Bar */}
+      <nav className={classes.NavBar}>
+        <Link id="SkillBtn" to="SkillView" smooth={true} offset={-50} duration={500} >
+          <Button variant="outline-light" >Skills</Button>
+        </Link>
+        <Link id="ProjectBtn" to="ProjectView" smooth={true} offset={-50} duration={500} >
+          <Button variant="outline-light" >Projects</Button>
+        </Link>
+				<Link id="AboutBtn" to="AboutView" smooth={true} duration={500} >
+          <Button variant="outline-light" >About</Button>
+        </Link>			
+			</nav>
+
+      {/* Mobile NavBar */}
+      <nav className={classes.NavBarMob}>
+          <Dropdown>
+            <Dropdown.Toggle variant="light" id="dropdown-basic">
+              Menu
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu variant="light" className={classes.Dropdown}>
+              <Link to="SkillView" smooth={true} offset={-50} duration={500} >
+                Skills
+              </Link>
+              <Link to="ProjectView" smooth={true} offset={-50} duration={500} >
+                Projects
+              </Link>
+              <Link to="AboutView" smooth={true} duration={500} >
+                About
+              </Link>
+            </Dropdown.Menu>
+          </Dropdown>
+      </nav>
+    </div>
+	);
+}

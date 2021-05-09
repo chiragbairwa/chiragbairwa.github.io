@@ -10,7 +10,7 @@ import Calculator from '../images/calculator.svg';
 function Project({id}) {
     return(
         <div className={classes.ProjectView} id={id}>
-          <h1 className={classes.ViewHeading}> Projects </h1>
+          <h1 className={classes.ViewHeading}>My Projects </h1>
           {/* Cards */}
           <div className={classes.ProjectCards}>
             <div className={classes.Column}>
@@ -24,7 +24,8 @@ function Project({id}) {
                 <div className={classes.Calculator}>
                   <p>Calculator</p>
                   <img src={Calculator} alt="Calculator" ></img>
-								</div>
+                  <i className="fa fa-instagram fa-lg mr-3 icons" ></i>
+                </div>
               </a>
             </div>
             <div className={classes.Column}>

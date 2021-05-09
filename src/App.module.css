@@ -1,97 +1,92 @@
 
 :root {
   --cardsradius: 30px;
-  --ViewCards-BRadius: 9px;
   --ViewCards-padding: 25px 40px 20px 40px;
-  --ViewCards-BgColor: #007bff;
+}
+.Container{
+  background-color: #1F2235;
 }
 h1, h3, h4, p{
   color: white;
-}
-.ViewHeading {
-  font-size:xx-large;
-  font-weight: 400;
-  font-style: italic;
   text-decoration: none;
 }
-.Container{
-  margin: 0 4% 3% 4%;
+/* Header */
+.Header {
+  position:fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+  background-color: #23263A;
 }
-
-.NavBarMob {
-  float: right;
-  display: none;
-  padding:25px 35px 0 0;
-}
-/* Links inside the dropdown */
-.Dropdown a {
-  float: none;
-  display: block;
-  padding: 12px 16px;
+.Dp{
+  width: 70px;
+  margin-left: 13%;
+  margin-top: -5px;
 }
 .NavBar {
   float: right;
-  padding-top: 40px;
+  margin:10px 100px 0 0;
 }
-.Dp{
-  width: 115px;
-}
-.NavBar > a {
+.NavBar > a{
   margin-right: 30px;
-}
-.NavBar > a > button{
   letter-spacing:1px;
+}
+.NavBarMob {
+  float: right;
+  display: none;
+  padding:14px 30px 0 0;
 }
 
 /* Welcome Section */
-.WelcomeView {
-  background-color:var(--ViewCards-BgColor); 
-  padding: var(--ViewCards-padding);
-  border-radius: var(--ViewCards-BRadius);
+.WelcomeView{
+  background-color: #23263A;
 }
+.WelcomeContent {
+  padding: 100px 0 0 13%;
+  padding-left: 13%;
+}
+
 .WelcomeMsg {
-  padding-top: 25px;
-  padding-left: 5%;
-  font-style: italic;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 48px;
 }
 .WelcomeMsg::after{
   content: " 👋";
 }
 .WelcomeView > p {
-  margin: 20px 0 0 5%;
-  color: whitesmoke;
+  font-size: 24px;
 }
 .CvBtn{
-  margin: 20px 0 25px 5%;
+  margin: 20px 0 80px 0;
+  border: solid;
+  border-radius: 3px 18px;
 }
 
 /* Skill Section */
 .SkillView {
-  background-color:var(--ViewCards-BgColor);
-  margin: 2% 0;
-  border-radius: 5px;
-  padding: var(--ViewCards-padding);
-  border-radius: var(--ViewCards-BRadius); 
+  margin-top: 50px;
 }
-.SkillCard {
-  display: flex;
-  border-radius: 5px;
-  justify-content: center;
+.SkillView > h1 {
+  text-align: center;
 }
 .PieChart {
-  width: 100%;
+  margin-top: 40px;
   height: 25rem;
 }
 
 /* Project Section */
 .ProjectView {
-  background-color:var(--ViewCards-BgColor);
+  margin-top: 50px;
+  background-color: #23263A;
   padding: var(--ViewCards-padding);
-  border-radius: var(--ViewCards-BRadius);
+}
+.ProjectView > h1 {
+  text-align: center;
 }
 .ProjectCards {
   display: flex;
-  margin-top: 30px;
+  margin-top: 4%;
   flex-direction: columns;
   justify-content:space-evenly; 
 }
@@ -104,29 +99,28 @@ h1, h3, h4, p{
 .Column > a > div{
   padding: 14px 20px 20px 20px;
   overflow: hidden;
+  text-align: center;
   margin-bottom: 30px;
   transition: transform .2s;
-  background-color:lightskyblue;
+  background-color: #3b3e50;
   border-radius: var(--cardsradius);
 }
 .Column > a > div:hover{
-  opacity: 0.9;
-  transform: scale(1.02);
+  transform: scale(1.01);
+  
 }
 .Column > a > div > p{
-  text-align: center;
   font-size: 1.5rem;
-  font-style: italic;
+  text-decoration: none;
 }
 .Column > a > div > img{
   width: 55%;
-  margin-left: 20%;
 }
 
 /* About Section */
 .AboutView {
   padding: 20px 40px;
-  background-color: #333333;
+  background-color: #1F2235;
 }
 .Social {
   margin-right: 3rem;
@@ -163,17 +157,14 @@ h1, h3, h4, p{
 
 
 @media (max-width: 450px){
-  :root {
-    --ViewCards-padding: 8px 20px 20px 20px;
-  }
-  
-  .Container{
-    margin: 0 0 3% 6%;
-  }
-
   /* Header */
   .TopBar >img{
     width: 80px;
+  }
+  .Dropdown > a {
+    float: none;
+    display: block;
+    padding: 12px 16px;
   }
   .NavBar {
     display: none;
@@ -184,28 +175,25 @@ h1, h3, h4, p{
 
   /* Welcome */
   .WelcomeMsg {
-    margin-left: 0;
     font-weight: 400;
-    font-size: 2rem;
+  }
+  .SocialBtn {
+    padding-left: 0;
   }
 
   /* Skills */
   .PieChart {
-    margin-top: 30px;
-    height:15rem;
+    width: 100%;
+    padding: 0 10px 0 10px;
   }
 
   /* Project Section */
   .ProjectCards {
     flex-direction: column;
+    margin-top: 50px;
   }
   .Column{
-    margin-left: 4%;
-    width:92%;
-  }
-  .Column > a > div > img{
-    margin-left: 0;
-    width: 100%;
+    width:100%;
   }
   
   /* About */
@@ -217,6 +205,7 @@ h1, h3, h4, p{
     flex-direction: column;
   }
   .Social {
+    text-align: center;
     margin-top: 10px;
   }
   .Social > h4 {
