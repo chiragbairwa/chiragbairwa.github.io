@@ -8,24 +8,26 @@
 }
 h1, h3, h4, p{
   color: white;
-  text-decoration: none;
 }
 /* Header */
 .Header {
-  position:fixed;
   top: 0;
   width: 100%;
+  position:fixed;
   transition: 0.2s;
+  padding-top: 20px;
+  z-index: 99;
   background-color: #23263A;
 }
 .Dp{
-  width: 70px;
-  margin-left: 13%;
-  margin-top: -5px;
+  width: 65px;
+  margin-left: 12%;
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 .NavBar {
   float: right;
-  margin:10px 100px 0 0;
+  margin: 13px 100px 0 0;
 }
 .NavBar > a{
   margin-right: 30px;
@@ -38,29 +40,29 @@ h1, h3, h4, p{
 }
 
 /* Welcome Section */
-.WelcomeView{
+.WelcomeView {
   background-color: #23263A;
 }
 .WelcomeContent {
-  padding: 100px 0 0 13%;
+  padding: 110px 0 0 13%;
   padding-left: 13%;
+  margin-top: 30px;
 }
-
+.SocialTop > div{
+  margin-left: 0;
+}
 .WelcomeMsg {
-  margin-top: 50px;
+  margin-top: 25px;
   margin-bottom: 20px;
   font-size: 48px;
+  color: white;
 }
-.WelcomeMsg::after{
-  content: " 👋";
-}
-.WelcomeView > p {
-  font-size: 24px;
+.WelcomeMsg > h1 {
+  margin-bottom: -5px;
+  font-size: 48px;
 }
 .CvBtn{
   margin: 20px 0 80px 0;
-  border: solid;
-  border-radius: 3px 18px;
 }
 
 /* Skill Section */
@@ -73,6 +75,7 @@ h1, h3, h4, p{
 .PieChart {
   margin-top: 40px;
   height: 25rem;
+  display: flex;
 }
 
 /* Project Section */
@@ -91,27 +94,26 @@ h1, h3, h4, p{
   justify-content:space-evenly; 
 }
 .Column {
-  width: 35%;
+  width: 30%;
 }
 .Column > a {
   text-decoration: none;
 }
+
 .Column > a > div{
-  padding: 14px 20px 20px 20px;
   overflow: hidden;
   text-align: center;
   margin-bottom: 30px;
   transition: transform .2s;
   background-color: #3b3e50;
+  padding: 14px 20px 20px 20px;
   border-radius: var(--cardsradius);
 }
 .Column > a > div:hover{
   transform: scale(1.01);
-  
 }
 .Column > a > div > p{
   font-size: 1.5rem;
-  text-decoration: none;
 }
 .Column > a > div > img{
   width: 55%;
@@ -127,7 +129,10 @@ h1, h3, h4, p{
 }
 .SocialBtn {
   display: flex;
-  margin: 30px 40px 0 0;
+  margin: 30px 0 0 0;
+}
+.SocialBtn > a {
+  margin-right: 20px;
 }
 .SocialBtn > a:hover{
   margin-top: -3px;
@@ -135,7 +140,6 @@ h1, h3, h4, p{
 .SocialBtn > a > div {
   width: 30px;
   height: 30px;
-  margin-right: 20px;
   background-size: cover;
 }
 .github {
@@ -149,14 +153,23 @@ h1, h3, h4, p{
 }
 .flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .Contact > div{
   margin-left: 0.7rem;
 }
+.Contact > h4 {
+  margin-bottom: 20px;
+}
+.AboutView > p{
+  text-align: center;
+}
 
 
 @media (max-width: 450px){
+  .ViewHeading {
+    font-size: 40px;
+  }
   /* Header */
   .TopBar >img{
     width: 80px;
@@ -175,7 +188,11 @@ h1, h3, h4, p{
 
   /* Welcome */
   .WelcomeMsg {
-    font-weight: 400;
+    font-size: 40px;
+  }
+  .WelcomeMsg > h1 {
+    margin-bottom: -5px;
+    font-size: 40px;
   }
   .SocialBtn {
     padding-left: 0;
@@ -183,10 +200,10 @@ h1, h3, h4, p{
 
   /* Skills */
   .PieChart {
-    width: 100%;
-    padding: 0 10px 0 10px;
+    height: 35rem;
+    flex-direction: column;
+    /* padding: 0 10px 0 10px; */
   }
-
   /* Project Section */
   .ProjectCards {
     flex-direction: column;

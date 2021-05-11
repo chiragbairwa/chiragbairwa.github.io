@@ -11,10 +11,14 @@ export default function Header(){
 
   function scrollFunction() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      document.getElementById("header").style.backgroundColor = '#131520';
+      document.getElementById("header").style.backgroundColor = '#191c2b';
+      document.getElementById("header").style.paddingTop = '0';
+      document.getElementById("header").style.opacity = '0.99';
     } 
     else {
       document.getElementById("header").style.backgroundColor= '#23263A';
+      document.getElementById("header").style.paddingTop = '20px';
+      document.getElementById("header").style.opacity = '1';
     }
   }
 	return(
@@ -22,10 +26,10 @@ export default function Header(){
       <img src={logo} alt={"Dp"} className={classes.Dp} />
       {/* Nav Bar */}
       <nav className={classes.NavBar}>
-        <Link id="SkillBtn" to="SkillView" smooth={true} offset={-50} duration={500} >
+        <Link id="SkillBtn" to="SkillView" smooth={true} offset={-115} duration={500} >
           <Button variant="outline-light" >Skills</Button>
         </Link>
-        <Link id="ProjectBtn" to="ProjectView" smooth={true} offset={-50} duration={500} >
+        <Link id="ProjectBtn" to="ProjectView" smooth={true} offset={-65} duration={500} >
           <Button variant="outline-light" >Projects</Button>
         </Link>
 				<Link id="AboutBtn" to="AboutView" smooth={true} duration={500} >

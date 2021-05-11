@@ -14,7 +14,7 @@ function Project({id}) {
           {/* Cards */}
           <div className={classes.ProjectCards}>
             <div className={classes.Column}>
-              <a href={"https://github.com/chiragbairwa/Pokedex-Bot"} target="_blank" rel="noopener noreferrer">
+              <a href={"https://t.me/PocketMonsterBot"} target="_blank" rel="noopener noreferrer">
                 <div className={classes.PokedexBot} >
                   <p>Pokedex Bot</p>
                   <img src={PokedexBot} alt="Pokedex" ></img>
@@ -24,7 +24,6 @@ function Project({id}) {
                 <div className={classes.Calculator}>
                   <p>Calculator</p>
                   <img src={Calculator} alt="Calculator" ></img>
-                  <i className="fa fa-instagram fa-lg mr-3 icons" ></i>
                 </div>
               </a>
             </div>
