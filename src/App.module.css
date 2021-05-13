@@ -3,8 +3,9 @@
   --cardsradius: 30px;
   --ViewCards-padding: 25px 40px 20px 40px;
 }
+
 .Container{
-  background-color: #1F2235;
+  background-color: #23263A;
 }
 h1, h3, h4, p{
   color: white;
@@ -16,8 +17,8 @@ h1, h3, h4, p{
   position:fixed;
   transition: 0.2s;
   padding-top: 20px;
-  z-index: 99;
   background-color: #23263A;
+  z-index: 99;
 }
 .Dp{
   width: 65px;
@@ -40,9 +41,6 @@ h1, h3, h4, p{
 }
 
 /* Welcome Section */
-.WelcomeView {
-  background-color: #23263A;
-}
 .WelcomeContent {
   padding: 110px 0 0 13%;
   padding-left: 13%;
@@ -81,7 +79,6 @@ h1, h3, h4, p{
 /* Project Section */
 .ProjectView {
   margin-top: 50px;
-  background-color: #23263A;
   padding: var(--ViewCards-padding);
 }
 .ProjectView > h1 {
@@ -94,7 +91,7 @@ h1, h3, h4, p{
   justify-content:space-evenly; 
 }
 .Column {
-  width: 30%;
+  width: 28%;
 }
 .Column > a {
   text-decoration: none;
@@ -119,6 +116,7 @@ h1, h3, h4, p{
   width: 55%;
 }
 
+
 /* About Section */
 .AboutView {
   padding: 20px 40px;
@@ -138,8 +136,8 @@ h1, h3, h4, p{
   margin-top: -3px;
 }
 .SocialBtn > a > div {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background-size: cover;
 }
 .github {
@@ -163,6 +161,8 @@ h1, h3, h4, p{
 }
 .AboutView > p{
   text-align: center;
+  margin-bottom: 0;
+  font-size:medium;
 }
 
 
@@ -215,17 +215,17 @@ h1, h3, h4, p{
   
   /* About */
   .AboutView {
-    padding: 20px 50px 0 50px;
+    padding: 20px 20px 0 20px;
   }
   .flex {
     display: flex;
     flex-direction: column;
   }
   .Social {
-    text-align: center;
     margin-top: 10px;
   }
   .Social > h4 {
+    text-align: center;
     display: none;
   }
   .SocialBtn {

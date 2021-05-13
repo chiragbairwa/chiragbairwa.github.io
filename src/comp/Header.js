@@ -41,14 +41,13 @@ export default function Header(){
       <nav className={classes.NavBarMob}>
           <Dropdown>
             <Dropdown.Toggle variant="light" id="dropdown-basic">
-              Menu
             </Dropdown.Toggle>
 
             <Dropdown.Menu variant="light" className={classes.Dropdown}>
-              <Link to="SkillView" smooth={true} offset={-50} duration={500} >
+              <Link to="SkillView" smooth={true} offset={-80} duration={500} >
                 Skills
               </Link>
-              <Link to="ProjectView" smooth={true} offset={-50} duration={500} >
+              <Link to="ProjectView" smooth={true} offset={-70} duration={500} >
                 Projects
               </Link>
               <Link to="AboutView" smooth={true} duration={500} >

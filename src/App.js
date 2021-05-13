@@ -55,7 +55,7 @@ export default function App() {
         </div>
         {/* Copyright */}
         <hr></hr>
-        <p>© Made by Chirag With ❤️ & Sweat</p>
+        <p>© Made With ❤️ by Chirag</p>
       </div>
       
     </div>

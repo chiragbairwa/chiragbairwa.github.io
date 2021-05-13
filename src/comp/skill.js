@@ -21,8 +21,8 @@ export default function skill(){
             <div className={classes.PieChart}>         
               <PieChart id="PieChart"
                 data={data1}
-                radius={PieChart.defaultProps.radius - 7}
-                segmentsShift={(index) => (index === 2 ? 0 : 1.5)}
+                radius={PieChart.defaultProps.radius - 8}
+                segmentsShift={(index) => (index === 4 ? 0 : 1.5)}
                 label={({ dataEntry }) => dataEntry.title}
                 labelStyle={{
                   fontSize: '6px',
@@ -33,8 +33,8 @@ export default function skill(){
               />
               <PieChart id="PieChart2"
                 data={data2}
-                radius={PieChart.defaultProps.radius - 7}
-                segmentsShift={(index) => (index === 2 ? 0 : 1.5)}
+                radius={PieChart.defaultProps.radius - 8}
+                segmentsShift={(index) => (index === 4 ? 0 : 1.5)}
                 label={({ dataEntry }) => dataEntry.title}
                 labelStyle={{
                   fontSize: '6px',
