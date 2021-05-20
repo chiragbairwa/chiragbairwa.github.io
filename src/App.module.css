@@ -1,9 +1,7 @@
-
 :root {
   --cardsradius: 30px;
   --ViewCards-padding: 25px 40px 20px 40px;
 }
-
 .Container{
   background-color: #23263A;
 }
@@ -52,7 +50,7 @@ h1, h3, h4, p{
 .WelcomeMsg {
   margin-top: 25px;
   margin-bottom: 20px;
-  font-size: 48px;
+  font-size: 46px;
   color: white;
 }
 .WelcomeMsg > h1 {
@@ -153,9 +151,6 @@ h1, h3, h4, p{
   display: flex;
   justify-content: space-around;
 }
-.Contact > div{
-  margin-left: 0.7rem;
-}
 .Contact > h4 {
   margin-bottom: 20px;
 }
@@ -188,11 +183,11 @@ h1, h3, h4, p{
 
   /* Welcome */
   .WelcomeMsg {
-    font-size: 40px;
+    font-size: 38px;
   }
   .WelcomeMsg > h1 {
     margin-bottom: -5px;
-    font-size: 40px;
+    font-size: 39px;
   }
   .SocialBtn {
     padding-left: 0;
@@ -218,14 +213,9 @@ h1, h3, h4, p{
     padding: 20px 20px 0 20px;
   }
   .flex {
-    display: flex;
     flex-direction: column;
   }
-  .Social {
-    margin-top: 10px;
-  }
   .Social > h4 {
-    text-align: center;
     display: none;
   }
   .SocialBtn {

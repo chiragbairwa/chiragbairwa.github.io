@@ -31,7 +31,7 @@ export default function App() {
             <h4>Feel free to contact me!!</h4>
             <div>
               <p>
-                <a href="mailto:chiragbairwa2k18@gmail.com">chiragbairwa2k18@gmail.com</a><br></br>
+                <a href="mailto:chirag.dev18@gmail.com">chirag.dev18@gmail.com</a><br></br>
                 Chandigarh, India
               </p>
             </div>
@@ -55,7 +55,7 @@ export default function App() {
         </div>
         {/* Copyright */}
         <hr></hr>
-        <p>© Made With ❤️ by Chirag</p>
+        <p>© Made with ❤️ by Chirag</p>
       </div>
       
     </div>
