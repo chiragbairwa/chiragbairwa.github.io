@@ -1,4 +1,5 @@
 // Modules
+import { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Link from 'react-scroll/modules/components/Link';
@@ -6,21 +7,23 @@ import classes from '../App.module.css';
 
 import logo from '../images/dp.png';
 
-export default function Header(){
-  window.onscroll = function() {scrollFunction()};
+export default function Header(){ 
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-      document.getElementById("header").style.backgroundColor = '#191c2b';
-      document.getElementById("header").style.paddingTop = '0';
-      document.getElementById("header").style.opacity = '0.99';
-    } 
-    else {
-      document.getElementById("header").style.backgroundColor= '#23263A';
-      document.getElementById("header").style.paddingTop = '20px';
-      document.getElementById("header").style.opacity = '1';
+  useEffect(()=>{
+    window.onscroll = ()=>{
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        document.getElementById("header").style.backgroundColor = '#191c2b';
+        document.getElementById("header").style.paddingTop = '0';
+        document.getElementById("header").style.opacity = '0.99';
+      } 
+      else {
+        document.getElementById("header").style.backgroundColor= '#23263A';
+        document.getElementById("header").style.paddingTop = '20px';
+        document.getElementById("header").style.opacity = '1';
+      }
     }
-  }
+  },[]);
+  
 	return(
     <div className={classes.Header} id="header">
       <img src={logo} alt={"Dp"} className={classes.Dp} />

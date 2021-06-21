@@ -16,7 +16,7 @@ h1, h3, h4, p{
   transition: 0.2s;
   padding-top: 20px;
   background-color: #23263A;
-  z-index: 99;
+  z-index: 999999;
 }
 .Dp{
   width: 65px;
