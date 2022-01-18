@@ -2,23 +2,33 @@
   --cardsradius: 30px;
   --ViewCards-padding: 25px 40px 20px 40px;
 }
-.Container{
-  background-color: #23263A;
+.Container {
+  background-color: #001220;
 }
-h1, h3, h4, p{
+h1,
+h3,
+h4,
+p {
   color: white;
+}
+/* Landing page */
+.LandingPage {
+  height: 100vh;
+  background-image: url(../src/images/bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* Header */
 .Header {
   top: 0;
   width: 100%;
-  position:fixed;
-  transition: 0.2s;
+  position: fixed;
+  transition: 0.3s;
   padding-top: 20px;
-  background-color: #23263A;
   z-index: 999999;
+  background-color: transparent;
 }
-.Dp{
+.Dp {
   width: 65px;
   margin-left: 12%;
   margin-top: -10px;
@@ -28,23 +38,23 @@ h1, h3, h4, p{
   float: right;
   margin: 13px 100px 0 0;
 }
-.NavBar > a{
+.NavBar > a {
   margin-right: 30px;
-  letter-spacing:1px;
+  letter-spacing: 1px;
 }
 .NavBarMob {
   float: right;
   display: none;
-  padding:14px 30px 0 0;
+  padding: 14px 30px 0 0;
 }
 
 /* Welcome Section */
 .WelcomeContent {
   padding: 110px 0 0 13%;
   padding-left: 13%;
-  margin-top: 30px;
 }
-.SocialTop > div{
+.SocialTop > div {
+  margin-top: 10vh;
   margin-left: 0;
 }
 .WelcomeMsg {
@@ -57,7 +67,7 @@ h1, h3, h4, p{
   margin-bottom: -5px;
   font-size: 48px;
 }
-.CvBtn{
+.CvBtn {
   margin: 20px 0 80px 0;
 }
 
@@ -86,7 +96,7 @@ h1, h3, h4, p{
   display: flex;
   margin-top: 4%;
   flex-direction: columns;
-  justify-content:space-evenly; 
+  justify-content: space-evenly;
 }
 .Column {
   width: 28%;
@@ -95,30 +105,29 @@ h1, h3, h4, p{
   text-decoration: none;
 }
 
-.Column > a > div{
+.Column > a > div {
   overflow: hidden;
   text-align: center;
   margin-bottom: 30px;
-  transition: transform .2s;
+  transition: transform 0.2s;
   background-color: #3b3e50;
   padding: 14px 20px 20px 20px;
   border-radius: var(--cardsradius);
 }
-.Column > a > div:hover{
+.Column > a > div:hover {
   transform: scale(1.01);
 }
-.Column > a > div > p{
+.Column > a > div > p {
   font-size: 1.5rem;
 }
-.Column > a > div > img{
+.Column > a > div > img {
   width: 55%;
 }
-
 
 /* About Section */
 .AboutView {
   padding: 20px 40px;
-  background-color: #1F2235;
+  background-color: #1f2235;
 }
 .Social {
   margin-right: 3rem;
@@ -130,7 +139,7 @@ h1, h3, h4, p{
 .SocialBtn > a {
   margin-right: 20px;
 }
-.SocialBtn > a:hover{
+.SocialBtn > a:hover {
   margin-top: -3px;
 }
 .SocialBtn > a > div {
@@ -154,19 +163,18 @@ h1, h3, h4, p{
 .Contact > h4 {
   margin-bottom: 20px;
 }
-.AboutView > p{
+.AboutView > p {
   text-align: center;
   margin-bottom: 0;
-  font-size:medium;
+  font-size: medium;
 }
 
-
-@media (max-width: 450px){
+@media (max-width: 450px) {
   .ViewHeading {
     font-size: 40px;
   }
   /* Header */
-  .TopBar >img{
+  .TopBar > img {
     width: 80px;
   }
   .Dropdown > a {
@@ -178,7 +186,7 @@ h1, h3, h4, p{
     display: none;
   }
   .NavBarMob {
-    display:block;
+    display: block;
   }
 
   /* Welcome */
@@ -204,10 +212,10 @@ h1, h3, h4, p{
     flex-direction: column;
     margin-top: 50px;
   }
-  .Column{
-    width:100%;
+  .Column {
+    width: 100%;
   }
-  
+
   /* About */
   .AboutView {
     padding: 20px 20px 0 20px;
