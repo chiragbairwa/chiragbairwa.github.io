@@ -73,15 +73,19 @@ p {
 
 /* Skill Section */
 .SkillView {
-  margin-top: 50px;
-}
-.SkillView > h1 {
+  height: 90vh;
+  padding-top: 50px;
   text-align: center;
 }
-.PieChart {
-  margin-top: 40px;
-  height: 25rem;
+
+.SkillCard {
+  box-sizing: border-box;
   display: flex;
+  padding: 0 20px;
+}
+.BarChart {
+  margin-top: 40px;
+  width: 50%;
 }
 
 /* Project Section */
@@ -202,10 +206,12 @@ p {
   }
 
   /* Skills */
-  .PieChart {
-    height: 35rem;
+  .SkillCard {
     flex-direction: column;
-    /* padding: 0 10px 0 10px; */
+  }
+  .BarChart {
+    width: 100%;
+    margin-bottom: 50px;
   }
   /* Project Section */
   .ProjectCards {

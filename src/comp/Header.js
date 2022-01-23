@@ -34,7 +34,7 @@ export default function Header() {
           id="SkillBtn"
           to="SkillView"
           smooth={true}
-          offset={-115}
+          offset={-60}
           duration={500}
         >
           <Button variant="outline-light">Skills</Button>
@@ -43,7 +43,7 @@ export default function Header() {
           id="ProjectBtn"
           to="ProjectView"
           smooth={true}
-          offset={-65}
+          offset={-60}
           duration={500}
         >
           <Button variant="outline-light">Projects</Button>

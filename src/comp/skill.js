@@ -1,50 +1,64 @@
-import classes from '../App.module.css';
-import {PieChart} from 'react-minimal-pie-chart';
+import classes from '../App.module.css'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+} from 'chart.js'
 
-export default function skill(){
-    const data1= [
-        { title: 'Dart', value: 10, color: 'rgb(126, 116, 219)' },
-        { title: 'C/C++', value: 18, color: 'rgb(46, 56, 134)' },
-        { title: 'JavaScript', value: 20, color: 'rgb(75, 75, 122)' },
-        { title: 'Python', value: 20, color: 'rgb(62, 52, 202)' },
-      ];
-    const data2= [
-    { title: 'Terminal', value: 10, color: 'rgb(62, 52, 202)' },
-    { title: 'ReactJs', value: 18, color: 'rgb(75, 75, 122)' },
-    { title: 'Flutter', value: 10, color: 'rgb(46, 56, 134)' },
-    { title: 'DevOps', value: 15, color: 'rgb(126, 116, 219)' },
-    ];
-    return(
-        <div className={classes.SkillView} id="SkillView">
-          <h1 id="#skills" className={classes.ViewHeading}>My Skills</h1>
-          <div className={classes.SkillCard}>
-            <div className={classes.PieChart}>         
-              <PieChart id="PieChart"
-                data={data1}
-                radius={PieChart.defaultProps.radius - 8}
-                segmentsShift={(index) => (index === 4 ? 0 : 1.5)}
-                label={({ dataEntry }) => dataEntry.title}
-                labelStyle={{
-                  fontSize: '6px',
-                  fontWeight: '600',
-                  color: 'white',
-                }}
-                // lengthAngle={360} animate
-              />
-              <PieChart id="PieChart2"
-                data={data2}
-                radius={PieChart.defaultProps.radius - 8}
-                segmentsShift={(index) => (index === 4 ? 0 : 1.5)}
-                label={({ dataEntry }) => dataEntry.title}
-                labelStyle={{
-                  fontSize: '6px',
-                  fontWeight: '600',
-                  color: 'white',
-                }}
-                // lengthAngle={360} animate
-              />
-            </div>
-          </div>
+import { Bar } from 'react-chartjs-2'
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend)
+
+export default function skill() {
+  const options = {
+    indexAxis: 'y',
+    elements: {
+      bar: {
+        borderWidth: 2,
+      },
+    },
+    responsive: true,
+  }
+
+  const languages = {
+    labels: ['C/C++', 'Dart', 'Java', 'JavaScript', 'Python'],
+    datasets: [
+      {
+        label: 'Languages',
+        data: [70, 40, 60, 65, 70, 100],
+        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+      },
+    ],
+  }
+  const devtools = {
+    labels: ['React.Js', 'Next.Js', 'Flutter', 'Tkinter'],
+    datasets: [
+      {
+        label: 'DevOps',
+        data: [80, 70, 40, 50, 100],
+        borderColor: 'rgb(80, 51, 240)',
+        backgroundColor: 'rgba(101, 78, 235, 0.5)',
+      },
+    ],
+  }
+
+  return (
+    <div className={classes.SkillView} id="SkillView">
+      <h1 id="#skills" className={classes.ViewHeading}>
+        My Skills
+      </h1>
+      <div className={classes.SkillCard}>
+        <div className={classes.BarChart}>
+          <Bar options={options} data={languages} />
         </div>
-    );
+        <div className={classes.BarChart}>
+          <Bar options={options} data={devtools} />
+        </div>
+      </div>
+    </div>
+  )
 }
