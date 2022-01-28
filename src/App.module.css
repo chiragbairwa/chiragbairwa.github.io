@@ -5,6 +5,7 @@
 .Container {
   background-color: #001220;
 }
+
 h1,
 h3,
 h4,
@@ -29,7 +30,8 @@ p {
   background-color: transparent;
 }
 .Dp {
-  width: 65px;
+  width: 60px;
+  transition: 0.3s;
   margin-left: 12%;
   margin-top: -10px;
   margin-bottom: 10px;
@@ -178,8 +180,8 @@ p {
     font-size: 40px;
   }
   /* Header */
-  .TopBar > img {
-    width: 80px;
+  .Dp {
+    width: 65px;
   }
   .Dropdown > a {
     float: none;
