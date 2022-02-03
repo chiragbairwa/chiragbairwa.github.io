@@ -16,7 +16,8 @@ export default function Header() {
       ) {
         document.getElementById('header').style.backgroundColor = '#00101b'
         document.getElementById('header').style.paddingTop = '0'
-        document.getElementById('header').style.opacity = '0.99'
+        document.getElementById('header').style.opacity = '0.9'
+        document.getElementById('header').style.borderRadius = '50px'
       } else {
         document.getElementById('header').style.backgroundColor = 'transparent'
         document.getElementById('header').style.paddingTop = '20px'

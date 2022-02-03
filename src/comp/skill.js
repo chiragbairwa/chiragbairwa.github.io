@@ -38,7 +38,7 @@ export default function skill() {
     labels: ['React.Js', 'Next.Js', 'Flutter', 'Tkinter'],
     datasets: [
       {
-        label: 'DevOps',
+        label: 'Frameworks',
         data: [80, 70, 40, 50, 100],
         borderColor: 'rgb(80, 51, 240)',
         backgroundColor: 'rgba(101, 78, 235, 0.5)',

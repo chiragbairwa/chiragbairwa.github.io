@@ -1,5 +1,4 @@
 import classes from './App.module.css'
-
 // Importing Components
 import Welcome from './comp/welcome'
 import Skill from './comp/skill'

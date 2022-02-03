@@ -3,7 +3,7 @@
   --ViewCards-padding: 25px 40px 20px 40px;
 }
 .Container {
-  background-color: #001220;
+  background-color: #061724;
 }
 
 h1,
@@ -22,13 +22,14 @@ p {
 /* Header */
 .Header {
   top: 0;
-  width: 100%;
+  width: 90vw;
   position: fixed;
   transition: 0.3s;
   padding-top: 20px;
   z-index: 999999;
-  background-color: transparent;
+  margin: 10px 20px 0 80px;
 }
+
 .Dp {
   width: 60px;
   transition: 0.3s;
@@ -75,7 +76,6 @@ p {
 
 /* Skill Section */
 .SkillView {
-  height: 90vh;
   padding-top: 50px;
   text-align: center;
 }
@@ -83,7 +83,7 @@ p {
 .SkillCard {
   box-sizing: border-box;
   display: flex;
-  padding: 0 20px;
+  padding: 20px 20px;
 }
 .BarChart {
   margin-top: 40px;
@@ -92,7 +92,7 @@ p {
 
 /* Project Section */
 .ProjectView {
-  margin-top: 50px;
+  margin-top: 150px;
   padding: var(--ViewCards-padding);
 }
 .ProjectView > h1 {
@@ -179,6 +179,9 @@ p {
   .ViewHeading {
     font-size: 40px;
   }
+  .Header {
+    margin-left: 20px;
+  }
   /* Header */
   .Dp {
     width: 65px;
@@ -216,6 +219,9 @@ p {
     margin-bottom: 50px;
   }
   /* Project Section */
+  .ProjectView {
+    margin-top: 0px;
+  }
   .ProjectCards {
     flex-direction: column;
     margin-top: 50px;
