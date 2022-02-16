@@ -3,7 +3,7 @@ import classes from './App.module.css'
 // Importing Components
 import Welcome from './comp/welcome'
 import Skill from './comp/skill'
-import Project from './comp/Project'
+import Project from './comp/project'
 
 import Header from './comp/Header'
 
