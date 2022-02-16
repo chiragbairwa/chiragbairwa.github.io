@@ -49,16 +49,7 @@ export default function welcome() {
         </div>
 
         {/* Show Buttons */}
-        {/* <Button
-          variant="outline-light"
-          href={CvLink}
-          className={classes.CvBtn}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          My Resume
-        </Button> */}
-        <a href={CvLink} target="_blank">
+        <a href={CvLink} target="_blank" rel="noopener noreferrer">
           <button className={classes.CvButton}>My Resume</button>
         </a>
       </div>
