@@ -2,9 +2,6 @@
   --cardsradius: 30px;
   --ViewCards-padding: 25px 40px 20px 40px;
 }
-.Container {
-  background-color: #061724;
-}
 
 h1,
 h3,
@@ -56,6 +53,12 @@ p {
   padding: 110px 0 0 13%;
   padding-left: 13%;
 }
+.WelcomeContent > img {
+  float: right;
+  margin-right: 150px;
+  margin-top: 50px;
+  z-index: -1;
+}
 .SocialTop > div {
   margin-top: 10vh;
   margin-left: 0;
@@ -70,13 +73,82 @@ p {
   margin-bottom: -5px;
   font-size: 48px;
 }
-.CvBtn {
-  margin: 20px 0 80px 0;
+.CvButton {
+  margin-top: 20px;
+  padding: 8px 20px;
+  border: 1px solid white;
+  color: #fff;
+  background: #001220;
+  position: relative;
+  z-index: 0;
+  border-radius: 8px;
+}
+
+.CvButton:before {
+  content: '';
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.CvButton:active {
+  color: #001220;
+}
+
+.CvButton:active:after {
+  background: transparent;
+}
+
+.CvButton:before {
+  opacity: 1;
+}
+
+.CvButton:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #001220;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 /* Skill Section */
 .SkillView {
-  padding-top: 50px;
+  padding: 50px 0;
   text-align: center;
 }
 
@@ -88,46 +160,6 @@ p {
 .BarChart {
   margin-top: 40px;
   width: 50%;
-}
-
-/* Project Section */
-.ProjectView {
-  margin-top: 150px;
-  padding: var(--ViewCards-padding);
-}
-.ProjectView > h1 {
-  text-align: center;
-}
-.ProjectCards {
-  display: flex;
-  margin-top: 4%;
-  flex-direction: columns;
-  justify-content: space-evenly;
-}
-.Column {
-  width: 28%;
-}
-.Column > a {
-  text-decoration: none;
-}
-
-.Column > a > div {
-  overflow: hidden;
-  text-align: center;
-  margin-bottom: 30px;
-  transition: transform 0.2s;
-  background-color: #3b3e50;
-  padding: 14px 20px 20px 20px;
-  border-radius: var(--cardsradius);
-}
-.Column > a > div:hover {
-  transform: scale(1.01);
-}
-.Column > a > div > p {
-  font-size: 1.5rem;
-}
-.Column > a > div > img {
-  width: 55%;
 }
 
 /* About Section */
@@ -199,11 +231,13 @@ p {
   }
 
   /* Welcome */
+  .WelcomeContent > img {
+    display: none;
+  }
   .WelcomeMsg {
     font-size: 38px;
   }
   .WelcomeMsg > h1 {
-    margin-bottom: -5px;
     font-size: 39px;
   }
   .SocialBtn {
@@ -217,17 +251,6 @@ p {
   .BarChart {
     width: 100%;
     margin-bottom: 50px;
-  }
-  /* Project Section */
-  .ProjectView {
-    margin-top: 0px;
-  }
-  .ProjectCards {
-    flex-direction: column;
-    margin-top: 50px;
-  }
-  .Column {
-    width: 100%;
   }
 
   /* About */

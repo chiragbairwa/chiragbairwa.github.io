@@ -1,28 +1,27 @@
 import classes from './App.module.css'
+
 // Importing Components
 import Welcome from './comp/welcome'
 import Skill from './comp/skill'
-import Project from './comp/project'
+import Project from './comp/Project'
+
 import Header from './comp/Header'
 
 export default function App() {
   return (
     <div className="App">
-      <div className={classes.Container}>
-        <div className={classes.LandingPage}>
-          {/* Header */}
-          <Header />
-
-          {/* Welcome View*/}
-          <Welcome />
-        </div>
-
-        {/* Skills View */}
-        <Skill />
-
-        {/* Projects View */}
-        <Project id="ProjectView" />
+      <div className={classes.LandingPage}>
+        {/* Header */}
+        <Header />
+        {/* Welcome View*/}
+        <Welcome />
       </div>
+
+      {/* Projects View */}
+      <Project id="ProjectView" />
+
+      {/* Skills View */}
+      <Skill />
 
       {/* About */}
       <div className={classes.AboutView} id="AboutView">

@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button'
 import classes from '../App.module.css'
 import Typewriter from 'typewriter-effect'
+import BlogImage from '../images/blogging.png'
 
 export default function welcome() {
   const CvLink =
@@ -8,6 +9,7 @@ export default function welcome() {
   return (
     <div className={classes.WelcomeView} id="WelcomeView">
       <div className={classes.WelcomeContent}>
+        <img src={BlogImage} alt="Blog Illustration" width="550" />
         <div className={classes.SocialTop}>
           <div className={classes.SocialBtn}>
             <a
@@ -33,6 +35,7 @@ export default function welcome() {
             </a>
           </div>
         </div>
+
         <div className={classes.WelcomeMsg}>
           <h1>Hi,</h1>
           <h1>I'm Chirag,</h1>
@@ -46,7 +49,7 @@ export default function welcome() {
         </div>
 
         {/* Show Buttons */}
-        <Button
+        {/* <Button
           variant="outline-light"
           href={CvLink}
           className={classes.CvBtn}
@@ -54,7 +57,10 @@ export default function welcome() {
           rel="noopener noreferrer"
         >
           My Resume
-        </Button>
+        </Button> */}
+        <a href={CvLink} target="_blank">
+          <button className={classes.CvButton}>My Resume</button>
+        </a>
       </div>
     </div>
   )

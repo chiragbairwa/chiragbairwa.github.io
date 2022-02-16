@@ -28,7 +28,9 @@ export default function Header() {
 
   return (
     <div className={classes.Header} id="header">
-      <img src={logo} alt={'Dp'} className={classes.Dp} id="Dp" />
+      <a href="https://chiragbairwa.codes">
+        <img src={logo} alt={'Dp'} className={classes.Dp} id="Dp" />
+      </a>
       {/* Nav Bar */}
       <nav className={classes.NavBar}>
         <Link

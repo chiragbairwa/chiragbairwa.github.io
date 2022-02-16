@@ -1,4 +1,5 @@
-import classes from '../App.module.css'
+import classes from './project.module.css'
+
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 

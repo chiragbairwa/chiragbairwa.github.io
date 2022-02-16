@@ -1,0 +1,53 @@
+/* Project Section */
+.ProjectView {
+  margin-top: 50px;
+  padding: var(--ViewCards-padding);
+}
+.ProjectView > h1 {
+  text-align: center;
+}
+.ProjectCards {
+  display: flex;
+  margin-top: 4%;
+  flex-direction: columns;
+  justify-content: space-evenly;
+}
+.Column {
+  width: 28%;
+}
+.Column > a {
+  text-decoration: none;
+}
+
+.Column > a > div {
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 30px;
+  transition: transform 0.2s;
+  background-color: #3b3e50;
+  padding: 14px 20px 20px 20px;
+  border-radius: var(--cardsradius);
+}
+.Column > a > div:hover {
+  transform: scale(1.01);
+}
+.Column > a > div > p {
+  font-size: 1.5rem;
+}
+.Column > a > div > img {
+  width: 55%;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Project Section */
+  .ProjectView {
+    margin-top: 0px;
+  }
+  .ProjectCards {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  .Column {
+    width: 100%;
+  }
+}
