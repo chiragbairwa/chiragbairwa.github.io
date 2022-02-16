@@ -1,4 +1,3 @@
-import Button from 'react-bootstrap/Button'
 import classes from '../App.module.css'
 import Typewriter from 'typewriter-effect'
 import BlogImage from '../images/blogging.png'
