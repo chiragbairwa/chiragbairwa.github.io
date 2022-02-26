@@ -36,7 +36,7 @@ export default function welcome() {
         </div>
 
         <div className={classes.WelcomeMsg}>
-          <h1>Hi,</h1>
+          <h2>Hi,</h2>
           <h1>I'm Chirag,</h1>
           <Typewriter
             options={{

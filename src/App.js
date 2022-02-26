@@ -5,7 +5,7 @@ import Welcome from './comp/welcome'
 import Skill from './comp/skill'
 import Project from './comp/project'
 
-import Header from './comp/Header'
+import Header from './comp/header'
 
 export default function App() {
   return (

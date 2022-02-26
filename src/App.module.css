@@ -26,22 +26,26 @@ p {
   z-index: 999999;
   margin: 10px 20px 0 80px;
 }
-
 .Dp {
   width: 60px;
   transition: 0.3s;
-  margin-left: 12%;
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin-left: 8%;
+  margin-top: -7px;
+  margin-bottom: 2px;
 }
+
 .NavBar {
   float: right;
-  margin: 13px 100px 0 0;
+  margin: 10px 100px 10px 0;
 }
 .NavBar > a {
   margin-right: 30px;
-  letter-spacing: 1px;
+  letter-spacing: 25x;
 }
+.NavBar > a > button {
+  width: 90px;
+}
+
 .NavBarMob {
   float: right;
   display: none;
@@ -51,7 +55,6 @@ p {
 /* Welcome Section */
 .WelcomeContent {
   padding: 110px 0 0 13%;
-  padding-left: 13%;
 }
 .WelcomeContent > img {
   float: right;
@@ -68,6 +71,10 @@ p {
   margin-bottom: 20px;
   font-size: 46px;
   color: white;
+}
+.WelcomeMsg > h2 {
+  margin-bottom: -5px;
+  font-size: 40px;
 }
 .WelcomeMsg > h1 {
   margin-bottom: -5px;

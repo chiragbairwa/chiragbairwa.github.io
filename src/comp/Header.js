@@ -1,9 +1,8 @@
 // Modules
 import { useEffect } from 'react'
-import Button from 'react-bootstrap/Button'
+import classes from '../App.module.css'
 import Dropdown from 'react-bootstrap/Dropdown'
 import Link from 'react-scroll/modules/components/Link'
-import classes from '../App.module.css'
 
 import logo from '../images/dp.png'
 
@@ -40,7 +39,9 @@ export default function Header() {
           offset={-60}
           duration={500}
         >
-          <Button variant="outline-light">Skills</Button>
+          <button type="button" className="btn btn-outline-light ">
+            Skills
+          </button>
         </Link>
         <Link
           id="ProjectBtn"
@@ -49,10 +50,14 @@ export default function Header() {
           offset={-60}
           duration={500}
         >
-          <Button variant="outline-light">Projects</Button>
+          <button type="button" className=" btn btn-outline-light ">
+            Projects
+          </button>
         </Link>
         <Link id="AboutBtn" to="AboutView" smooth={true} duration={500}>
-          <Button variant="outline-light">About</Button>
+          <button type="button" className="btn btn-outline-light ">
+            About
+          </button>
         </Link>
       </nav>
 
